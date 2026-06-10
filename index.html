@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eltheos LLC | Enterprise Automation & IT Solutions</title>
+  <meta name="description" content="Tailored IT consulting and automation solutions for business customers. Optimize your business processes, integrate systems, and drive growth with Eltheos.">
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta property="og:title" content="Eltheos LLC | Enterprise Automation & IT Solutions">
+  <meta property="og:description" content="Tailored IT consulting and automation solutions for business customers. Optimize your business processes, integrate systems, and drive growth with Eltheos.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Particle Background Canvas -->
+  <canvas id="hero-canvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="nav-container" id="main-nav">
+      <a href="#" class="logo" id="nav-logo">
+        <span class="logo-dot"></span>
+        Eltheos
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero" class="nav-link active" id="link-hero">Home</a></li>
+        <li><a href="#services" class="nav-link" id="link-services">Services</a></li>
+        <li><a href="#why-us" class="nav-link" id="link-why-us">Why Eltheos</a></li>
+        <li><a href="#metrics" class="nav-link" id="link-metrics">Our Impact</a></li>
+        <li><a href="#contact" class="nav-link" id="link-contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-glow" id="nav-btn-cta">Get Started</a>
+      </div>
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="badge-container">
+          <span class="badge" id="hero-badge">Next-Gen Enterprise Solutions</span>
+        </div>
+        <h1 class="hero-title">
+          We Architect the <br>
+          <span class="text-gradient">Future of Enterprise</span>
+        </h1>
+        <p class="hero-subtitle">
+          Tailored automation, optimized processes, and seamless technology integrations designed to scale your business with mathematical precision.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary" id="hero-btn-primary">Consult Our Experts</a>
+          <a href="#services" class="btn btn-secondary" id="hero-btn-secondary">Explore Services</a>
+        </div>
+      </div>
+      
+      <!-- Visual Element: Interactive Dashboard Preview Mockup -->
+      <div class="hero-visual">
+        <div class="glass-dashboard" id="hero-dashboard">
+          <div class="dashboard-header">
+            <div class="window-controls">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="dashboard-title">eltheos-system-v4.0</div>
+          </div>
+          <div class="dashboard-body">
+            <div class="db-sidebar">
+              <div class="db-item active"></div>
+              <div class="db-item"></div>
+              <div class="db-item"></div>
+            </div>
+            <div class="db-main">
+              <div class="db-cards">
+                <div class="db-card">
+                  <div class="card-bar" style="--val: 70%"></div>
+                  <div class="card-text">Efficiency</div>
+                </div>
+                <div class="db-card">
+                  <div class="card-bar" style="--val: 92%"></div>
+                  <div class="card-text">Automation</div>
+                </div>
+                <div class="db-card">
+                  <div class="card-bar" style="--val: 45%"></div>
+                  <div class="card-text">Load Balancer</div>
+                </div>
+              </div>
+              <div class="db-chart-container">
+                <svg viewBox="0 0 400 120" class="db-chart">
+                  <defs>
+                    <linearGradient id="chart-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--accent-glow)" stop-opacity="0.3"></stop>
+                      <stop offset="100%" stop-color="var(--accent-glow)" stop-opacity="0.0"></stop>
+                    </linearGradient>
+                  </defs>
+                  <path class="chart-path" d="M0,80 Q50,40 100,60 T200,30 T300,50 T400,10 L400,120 L0,120 Z" fill="url(#chart-grad)"></path>
+                  <path class="chart-line" d="M0,80 Q50,40 100,60 T200,30 T300,50 T400,10" fill="none" stroke="var(--accent-color)" stroke-width="3"></path>
+                  <circle cx="200" cy="30" r="4" fill="var(--text-primary)"></circle>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <a href="#services" aria-label="Scroll down">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">What We Do</span>
+          <h2 class="section-title">Engineered to Automate & Optimize</h2>
+          <p class="section-desc">We build enterprise-grade architectures that replace manual latency with continuous automated efficiency.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Card 1 -->
+          <div class="service-card glass-card scroll-reveal" id="service-automation">
+            <div class="card-icon">
+              <!-- Inline SVG for Automation (Gear & Lightning) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Hyper-Automation</h3>
+            <p class="card-text">
+              Transform repetitive, error-prone manual tasks into hyper-efficient automated workflows. We leverage advanced robotic processes (RPA) and AI integrations to maximize throughput.
+            </p>
+            <ul class="card-features">
+              <li>Custom RPA Pipelines</li>
+              <li>SaaS & Legacy Integrations</li>
+              <li>Automated Data Validation</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card glass-card scroll-reveal" id="service-process">
+            <div class="card-icon">
+              <!-- Inline SVG for Business Processes (Flowchart) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="6" height="6" rx="1"></rect>
+                <rect x="15" y="3" width="6" height="6" rx="1"></rect>
+                <rect x="9" y="15" width="6" height="6" rx="1"></rect>
+                <path d="M12 15V9"></path>
+                <path d="M6 9v3h12V9"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Process Optimization</h3>
+            <p class="card-text">
+              Analyze, streamline, and re-engineer business processes from the ground up. We isolate bottlenecks, reduce redundancies, and build standardized digital execution paths.
+            </p>
+            <ul class="card-features">
+              <li>Bottleneck Diagnostics</li>
+              <li>Standard Operating Procedures (SOP)</li>
+              <li>Lean Digital Restructuring</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card glass-card scroll-reveal" id="service-solutions">
+            <div class="card-icon">
+              <!-- Inline SVG for Custom Solutions (Code/Database) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+                <line x1="14" y1="2" x2="10" y2="22"></line>
+              </svg>
+            </div>
+            <h3 class="card-title">Tailored IT Systems</h3>
+            <p class="card-text">
+              No generic software can fully capture your business logic. We design, deploy, and maintain bespoke custom software solutions and architectures tailored specifically to your operations.
+            </p>
+            <ul class="card-features">
+              <li>Scalable Cloud Architecture</li>
+              <li>API Development & Governance</li>
+              <li>Enterprise Security Protocols</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section (Bento Grid) -->
+    <section id="why-us" class="why-us-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Why Choose Us</span>
+          <h2 class="section-title">The Eltheos Advantage</h2>
+          <p class="section-desc">We combine engineering rigor with deep strategic insight to deliver results that translate directly to your balance sheet.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Big Card 1 -->
+          <div class="bento-card bento-wide glass-card scroll-reveal" id="bento-1">
+            <div class="bento-content">
+              <h3>Tailored Solutions, Zero Compromise</h3>
+              <p>We do not sell pre-packaged, bloated software. Our engineers sit down with your stakeholders, map your exact requirements, and architect a solution designed solely for your operations.</p>
+            </div>
+            <div class="bento-graphic">
+              <!-- SVG Visual representation of tailoring -->
+              <svg viewBox="0 0 300 120" class="graphic-tailor">
+                <line x1="20" y1="60" x2="280" y2="60" stroke="rgba(255,255,255,0.1)" stroke-width="2" stroke-dasharray="5 5"></line>
+                <circle cx="60" cy="60" r="8" fill="var(--accent-glow)"></circle>
+                <circle cx="150" cy="60" r="16" fill="var(--accent-color)" opacity="0.8"></circle>
+                <circle cx="240" cy="60" r="8" fill="var(--accent-glow)"></circle>
+                <path d="M 60 60 Q 150 20 240 60" fill="none" stroke="var(--accent-color)" stroke-width="2"></path>
+                <path d="M 60 60 Q 150 100 240 60" fill="none" stroke="var(--accent-glow)" stroke-width="2" stroke-dasharray="4"></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Small Card 2 -->
+          <div class="bento-card glass-card scroll-reveal" id="bento-2">
+            <div class="bento-content">
+              <h3>Enterprise Security</h3>
+              <p>Security is built into the codebase, not added as an afterthought. GDPR compliance, end-to-end encryption, and robust access governance are standard.</p>
+            </div>
+            <div class="bento-badge">ISO 27001 Ready</div>
+          </div>
+
+          <!-- Small Card 3 -->
+          <div class="bento-card glass-card scroll-reveal" id="bento-3">
+            <div class="bento-content">
+              <h3>Continuous Support</h3>
+              <p>We provide comprehensive SLA agreements, continuous uptime monitoring, and persistent optimization cycles for every solution we deploy.</p>
+            </div>
+            <div class="bento-badge">99.99% Uptime SLA</div>
+          </div>
+
+          <!-- Big Card 4 -->
+          <div class="bento-card bento-wide glass-card scroll-reveal" id="bento-4">
+            <div class="bento-content">
+              <h3>Proven ROI Metrics</h3>
+              <p>Every single implementation starts with mapping key performance indicators. If we cannot measure the automation or optimization impact, we do not build it.</p>
+            </div>
+            <div class="bento-metrics-preview">
+              <div class="metric-row">
+                <span>Operational Speed</span>
+                <span class="val-up">+340%</span>
+              </div>
+              <div class="metric-row">
+                <span>Human Error Incidents</span>
+                <span class="val-down">-98.4%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metrics" class="metrics-section">
+      <div class="section-container">
+        <div class="metrics-grid">
+          <div class="metric-item scroll-reveal" id="metric-hours">
+            <div class="metric-number" data-target="500000">0</div>
+            <div class="metric-label">Hours of Manual Labor Saved</div>
+          </div>
+          <div class="metric-item scroll-reveal" id="metric-efficiency">
+            <div class="metric-number" data-target="99">0</div>
+            <div class="metric-label">Business Process Accuracy</div>
+          </div>
+          <div class="metric-item scroll-reveal" id="metric-roi">
+            <div class="metric-number" data-target="15">0</div>
+            <div class="metric-label">Average ROI Multiplier (12m)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <div class="contact-grid">
+          <div class="contact-info scroll-reveal">
+            <span class="section-subtitle">Let's Connect</span>
+            <h2 class="contact-title">Ready to Optimize Your Operations?</h2>
+            <p class="contact-desc">
+              Get in touch for an initial process evaluation workshop. Our consultants will review your current systems and map a high-level automation outline at no charge.
+            </p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <span class="method-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </span>
+                <span>info@eltheos.com</span>
+              </div>
+
+              <div class="contact-method">
+                <span class="method-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </span>
+                <span>Austin, Texas, USA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form (Glassmorphic) -->
+          <div class="contact-form-container glass-card scroll-reveal" id="form-container">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Full Name</label>
+                  <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                  <span class="error-msg" id="err-name">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Work Email</label>
+                  <input type="email" id="form-email" name="email" placeholder="john@company.com" required>
+                  <span class="error-msg" id="err-email">Please enter a valid work email.</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-company">Company Name</label>
+                <input type="text" id="form-company" name="company" placeholder="Acme Corporation" required>
+                <span class="error-msg" id="err-company">Please enter your company.</span>
+              </div>
+              <div class="form-group">
+                <label for="form-service">Primary Area of Interest</label>
+                <div class="custom-select-wrapper">
+                  <select id="form-service" name="service" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="automation">Process Automation & RPA</option>
+                    <option value="optimization">Operational Process Optimization</option>
+                    <option value="custom">Bespoke Custom IT Systems</option>
+                    <option value="other">General Consultation</option>
+                  </select>
+                </div>
+                <span class="error-msg" id="err-service">Please select a service area.</span>
+              </div>
+              <div class="form-group">
+                <label for="form-message">Describe Your Bottleneck</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Briefly describe the systems or manual steps you are looking to automate or optimize..." required></textarea>
+                <span class="error-msg" id="err-message">Please write a brief description of your request.</span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit" id="form-btn-submit">
+                <span>Submit Request</span>
+                <span class="btn-loader"></span>
+              </button>
+            </form>
+            
+            <!-- Success Overlay -->
+            <div class="form-success-overlay" id="form-success">
+              <div class="success-message">
+                <div class="success-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3>Request Received</h3>
+                <p>Thank you for reaching out. One of our lead IT solutions architects will review your request and contact you within 24 hours.</p>
+                <button type="button" class="btn btn-secondary" id="success-close-btn">Send Another Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-dot"></span>
+          Eltheos
+        </a>
+        <p class="footer-tagline">Architecting tailored enterprise systems that drive autonomous operational growth.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Hyper-Automation</a></li>
+            <li><a href="#services">Process Optimization</a></li>
+            <li><a href="#services">Bespoke Enterprise IT</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#why-us">Methodology</a></li>
+            <li><a href="#metrics">Success Metrics</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2026 Eltheos LLC. All rights reserved.</p>
+        <p>Austin-based Enterprise Solutions.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
