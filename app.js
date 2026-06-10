@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParticles();
   initScrollSpyAndReveals();
   initCounters();
-  initContactForm();
+  initPremiumInteractions();
 });
 
 /* ==========================================================================
@@ -304,84 +304,31 @@ function initCounters() {
 }
 
 /* ==========================================================================
-   5. CONTACT FORM VALIDATION & DYNAMIC SUBMIT
+   5. PREMIUM INTERACTIONS (CURSOR GLOW & SCROLL PROGRESS)
    ========================================================================== */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const formContainer = document.getElementById('form-container');
-  const successOverlay = document.getElementById('form-success');
-  const closeBtn = document.getElementById('success-close-btn');
-  const submitBtn = document.getElementById('form-btn-submit');
+function initPremiumInteractions() {
+  // 5a. Dynamic Scroll Progress Bar
+  const progress = document.createElement('div');
+  progress.classList.add('scroll-progress');
+  document.body.appendChild(progress);
+  
+  window.addEventListener('scroll', () => {
+    const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalScroll > 0) {
+      const scrollPercent = (window.scrollY / totalScroll) * 100;
+      progress.style.width = `${scrollPercent}%`;
+    }
+  });
 
-  if (!form) return;
-
-  // Real-time input validation listener on focusout
-  const inputs = form.querySelectorAll('input, textarea, select');
-  inputs.forEach(input => {
-    input.addEventListener('blur', () => validateInput(input));
-    input.addEventListener('input', () => {
-      const group = input.closest('.form-group');
-      if (group.classList.contains('invalid')) {
-        validateInput(input);
-      }
+  // 5b. Cursor Radial Glow for Glass Cards
+  const glassCards = document.querySelectorAll('.glass-card');
+  glassCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
     });
   });
-
-  // Submit Handler
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    let isFormValid = true;
-    inputs.forEach(input => {
-      if (!validateInput(input)) {
-        isFormValid = false;
-      }
-    });
-
-    if (isFormValid) {
-      // Trigger loader state
-      submitBtn.classList.add('loading');
-      submitBtn.setAttribute('disabled', 'true');
-
-      // Simulate API call to netlify / vercel static handler or custom server
-      setTimeout(() => {
-        submitBtn.classList.remove('loading');
-        submitBtn.removeAttribute('disabled');
-        
-        // Show success screen
-        successOverlay.classList.add('active');
-        form.reset();
-      }, 1500);
-    }
-  });
-
-  // Close success overlay
-  closeBtn.addEventListener('click', () => {
-    successOverlay.classList.remove('active');
-  });
-
-  // Core Validation Rule function
-  function validateInput(input) {
-    const group = input.closest('.form-group');
-    let isValid = true;
-
-    if (input.required && !input.value.trim()) {
-      isValid = false;
-    } else if (input.type === 'email') {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(input.value.trim())) {
-        isValid = false;
-      }
-    } else if (input.tagName === 'SELECT' && !input.value) {
-      isValid = false;
-    }
-
-    if (isValid) {
-      group.classList.remove('invalid');
-    } else {
-      group.classList.add('invalid');
-    }
-
-    return isValid;
-  }
 }
