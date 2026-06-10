@@ -789,48 +789,45 @@ a {
    CONTACT FORM & WORKSHOPS
    ========================================================================== */
 /* ==========================================================================
-   CONTACT CARD & WORKSHOPS (REDESIGNED)
+   CONTACT CARD & WORKSHOPS (REDESIGNED DUAL CARDS)
    ========================================================================== */
-.contact-card-centered {
+.contact-centered-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.contact-cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
   max-width: 800px;
   margin: 0 auto;
-  padding: 60px 40px;
+}
+
+.contact-item-card {
+  padding: 50px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
-}
-
-.contact-card-centered .contact-title {
-  margin-top: 10px;
-}
-
-.contact-card-centered .contact-desc {
-  max-width: 600px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.contact-details-row {
-  display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 48px;
-  width: 100%;
-  margin: 10px 0;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.contact-detail-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  text-align: left;
+#contact-card-email {
+  cursor: pointer;
 }
 
-.detail-icon {
-  width: 48px;
-  height: 48px;
+#contact-card-location {
+  cursor: default;
+}
+
+.contact-item-icon {
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: rgba(99, 102, 241, 0.06);
   border: 1px solid var(--border-glow);
@@ -838,44 +835,55 @@ a {
   align-items: center;
   justify-content: center;
   color: var(--accent-glow);
+  transition: var(--transition-smooth);
 }
 
-.detail-icon svg {
-  width: 20px;
-  height: 20px;
+.contact-item-card:hover .contact-item-icon {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  transform: scale(1.05);
 }
 
-.detail-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.contact-item-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
-.detail-label {
+.contact-item-label {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: var(--text-muted);
+  font-weight: 500;
 }
 
-.detail-link, .detail-text {
-  font-size: 1.1rem;
+.contact-item-value {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+}
+
+.contact-item-action {
+  font-size: 0.85rem;
   font-weight: 500;
+  color: var(--accent-glow);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+
+.contact-item-card:hover .contact-item-action {
   color: var(--text-primary);
 }
 
-.detail-link:hover {
-  color: var(--accent-glow);
+.contact-item-card:hover .contact-item-action svg {
+  transform: translateX(4px);
+  transition: var(--transition-fast);
 }
 
-.contact-action {
-  margin-top: 10px;
-}
-
-.btn-email-us {
-  padding: 14px 36px;
-  font-size: 1rem;
-}
 
 /* ==========================================================================
    PREMIUM INTERACTIONS (CURSOR GLOW & SCROLL PROGRESS)
@@ -1072,9 +1080,8 @@ a {
   .bento-wide {
     grid-column: span 2;
   }
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .contact-cards-container {
+    gap: 20px;
   }
   .footer-container {
     grid-template-columns: 1fr;
@@ -1166,13 +1173,15 @@ a {
     gap: 30px;
   }
 
-  .form-row {
+  .contact-cards-container {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
-  .contact-form-container {
-    padding: 24px;
+  .contact-item-card {
+    padding: 35px 25px;
+  }
+  .contact-item-value {
+    font-size: 1.15rem;
   }
 
   .footer-links {
